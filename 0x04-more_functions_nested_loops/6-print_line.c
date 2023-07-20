@@ -1,24 +1,25 @@
 #include "main.h"
-
 /**
- * print_line - check the code.
- *@n: variable
- * Return: void .
+ * print_line - printa line
+ *
+ * @n: print n number of _
+ *
+ * Return: none
  */
 void print_line(int n)
 {
-int count;
-count = 0;
-if (n <= 0)
-{
-_putchar('\n');
-}
-else
-{
-for (count = 0; count < n; count++)
-{
-_putchar('_');
-}
-_putchar('\n');
-}
+	int i;
+
+	if (n > 0)
+	{
+		for (i = 0; i < n; i++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }

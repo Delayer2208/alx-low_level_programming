@@ -1,19 +1,29 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * main - prints the lagest prime factor of 612852475143
- * Return: always 0
- **/
-
+ * main - Entry point
+ *
+ * description - largest prime factor of 612852475143
+ *
+ * Return: 0
+ */
 int main(void)
 {
-	unsigned long int i, n = 612852475143;
+	unsigned int i;
+	unsigned long l;
 
-	for (i = 3; i < 782849; i = i + 2)
+	i = 2;
+	l = 612852475143;
+	while (i != l)
 	{
-		while ((n % i == 0) && (n != i))
-			n = n / i;
+		if ((l % i) == 0)
+		{
+			l = l / i;
+		}
+		else
+		{
+			i++;
+		}
 	}
-	printf("%lu\n", n);
+	printf("%lu\n", l);
 	return (0);
 }

@@ -1,41 +1,26 @@
 #include "main.h"
-
 /**
- * more_numbers - check the code.
- * Return: void .
+ * more_numbers - print 0-14 10 times
+ *
+ * description - use ASCII
+ *
+ * Return: none
  */
 void more_numbers(void)
 {
-int count, i, changer, id;
-count = 0;
-id = 0;
-while (count < 10)
-{
-i = 0;
-for (i = 0; i <= 14; i++)
-{
-changer = i;
-if (i < 10)
-{
-changer = i;
-}
-else
-{
-changer = 1;
-}
-_putchar(changer + '0');
-if (i > 9)
-{
-_putchar(id + '0');
-id++;
-}
-}
+	int i;
+	int j;
 
-_putchar('\n');
-if (i == 15)
-{
-id = 0;
-}
-count++;
-}
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 14; j++)
+		{
+			if (j > 9)
+			{
+				_putchar((j / 10) + '0');
+			}
+			_putchar((j % 10) + '0');
+		}
+		_putchar('\n');
+	}
 }
